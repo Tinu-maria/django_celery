@@ -1,0 +1,8 @@
+redis-server
+
+python3 manage.py runserver
+
+celery -A celery_tutorial.celery worker --loglevel=info
+
+celery -A main beat -l INFO
+

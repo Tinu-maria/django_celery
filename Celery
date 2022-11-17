@@ -1,0 +1,25 @@
+CELERY
+.......
+https://realpython.com/asynchronous-tasks-with-django-and-celery/
+
+- Celery is a distributed task queue that can collect, record schedule and perform task outside main program
+
+- 2 message brokers
+* Redis
+* RabbitMQ
+
+- 2 reasons for using celery
+* Scheduling task execution at specific times
+* Offloading work from your app to distributed processes that can run independently of your app
+
+- Celery uses
+* email sending
+* image processing
+* text processing
+* api call/website requests
+* report generation
+
+
+Django adds tasks to Redis; Redis feeds tasks to Celery
+
+
