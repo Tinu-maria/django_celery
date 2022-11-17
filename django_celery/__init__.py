@@ -1,4 +1,4 @@
-# To make sure that your Celery app is loaded when you start Django
+# To make sure the Celery app is loaded when we start Django
 
 from .celery import app as celery_app
 
