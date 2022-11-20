@@ -1,5 +1,8 @@
+from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
+import os
+import logging
 
 from feedback.forms import FeedbackForm
 
@@ -17,4 +20,11 @@ class FeedbackFormView(FormView):
 class SuccessView(TemplateView):
     template_name = "feedback/success.html"
 
+log = logging.getLogger('log')
 
+def index(request):
+    log.info("Message for information")
+    log.warning("Message for warning")
+    log.error("Message for error")
+    log.critical("Message for critical")
+    return render(request, 'feedback/index.html')
