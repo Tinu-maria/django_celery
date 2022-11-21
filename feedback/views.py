@@ -19,6 +19,7 @@ class FeedbackFormView(FormView):
 
 class SuccessView(TemplateView):
     template_name = "feedback/success.html"
+    
 
 log = logging.getLogger('log')
 
@@ -26,5 +27,5 @@ def index(request):
     log.info("Message for information")
     log.warning("Message for warning")
     log.error("Message for error")
-    log.critical("Message for critical")
+    log.critical("Message for critical error")
     return render(request, 'feedback/index.html')
